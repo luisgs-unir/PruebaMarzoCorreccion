@@ -61,11 +61,10 @@ class BibliotecaTest {
 
         biblio.encuentraLibrosPorAutor("Cervantes");
 
-        // ToDo
+        // comprobamos que devuelve una lista
         assertInstanceOf(List.class, biblio.encuentraLibrosPorAutor(libro.getAutor()));
 
-        assertTrue(biblio.encuentraLibrosPorAutor(libro.getAutor()) instanceof List<Libro>);
-
+        // comprobamos que el libro está en la lista
         assertTrue(biblio.encuentraLibrosPorAutor(libro.getAutor()).contains(libro));
     }
 
